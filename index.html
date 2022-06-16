@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      JS CRUD app
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+
+            <div>
+              <label>First Name</label>
+              <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+
+              <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+              <label>Last Name</label>
+              <input type="text" name="lastName" id="lastName">
+            </div>
+            <div>
+              <label>Date of Birth</label>
+              <input 
+                type="date" 
+                id="dateOfBirth" 
+                name="dateOfBirth"
+                min=""
+                >
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </td>
+        <td>
+          <table calss="list" id="dataList">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+              </tr>
+
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    
+    <script src="script.js"></script>
+  </body>
+  
+</html>
